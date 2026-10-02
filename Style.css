@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  background: #f5f1ed;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #3f3935;
+}
+
+#lockScreen,
+#message {
+  width: 100%;
+  max-width: 520px;
+  padding: 35px;
+
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(80, 70, 60, 0.08);
+  border-radius: 24px;
+
+  box-shadow: 0 15px 45px rgba(60, 50, 40, 0.12);
+}
+
+#lockScreen {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+#message {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+#message h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#message p {
+  margin-bottom: 22px;
+}
+
+input {
+  width: 100%;
+  max-width: 220px;
+  padding: 13px 16px;
+  margin: 12px 0;
+
+  border: 1px solid #d8d0c9;
+  border-radius: 12px;
+  background: #fff;
+
+  text-align: center;
+  font-size: 18px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #a99b90;
+}
+
+button {
+  display: block;
+  margin: 8px auto;
+
+  padding: 12px 28px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #4d4641;
+  color: white;
+
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#error {
+  color: #a45c5c;
+  font-size: 14px;
+}
+
+h3 {
+  margin-top: 35px;
+  font-weight: normal;
+}
+
+.song-note {
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.7;
+  margin-top: -12px !important;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  margin-top: 15px;
+}
+/* Soft entrance animation */
+#lockScreen,
+#message {
+  animation: fadeIn 1.2s ease;
+}
+
+/* Small heart divider */
+#message::before {
+  content: "♡";
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+  opacity: 0.45;
+}
+
+/* Gentle message spacing */
+#message p {
+  letter-spacing: 0.1px;
+}
+
+/* Make the song section feel separate */
+#message h3 {
+  text-align: center;
+  margin-top: 40px;
+  letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
